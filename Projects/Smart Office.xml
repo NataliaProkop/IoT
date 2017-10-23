@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Projects>
+        <Project dependsOn="" description="Projekt 1" documentationContent="" homeMashup="" lastModifiedDate="2017-10-23T21:03:14.478+02:00" name="Smart Office" packageVersion="1.0.0" projectName="Smart Office" tags="Smart_Office:Natalia;Smart_Office:Ania">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated, description : updated&#10;" timestamp="2017-10-23T20:52:36.079+02:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : tags : updated&#10;" timestamp="2017-10-23T21:03:12.463+02:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-23T21:03:14.478+02:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </Project>
+    </Projects>
+</Entities>

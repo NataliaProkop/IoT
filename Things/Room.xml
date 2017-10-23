@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2017-10-23T21:10:59.207+02:00" name="Room" projectName="Smart Office" published="false" tags="Smart_Office:Natalia" thingTemplate="GenericThing" valueStream="">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions/>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations/>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, thingTemplate : updated, projectName : updated, tags : updated&#10;" timestamp="2017-10-23T21:10:59.207+02:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>

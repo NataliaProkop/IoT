@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ModelTags>
+        <ModelTagVocabulary description="" documentationContent="" homeMashup="" isDynamic="true" lastModifiedDate="2017-10-23T21:02:29.044+02:00" name="Smart_Office" projectName="Smart Office" tags="">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <VocabularyTerm description="" name="Ania"/>
+            <VocabularyTerm description="" name="Natalia"/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, projectName : updated&#10;documentation : updated&#10;" timestamp="2017-10-23T21:01:56.389+02:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : isDynamic : updated&#10;" timestamp="2017-10-23T21:02:29.044+02:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </ModelTagVocabulary>
+    </ModelTags>
+</Entities>
