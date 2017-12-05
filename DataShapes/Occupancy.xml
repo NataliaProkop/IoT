@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape baseDataShape="" description="" documentationContent="" homeMashup="" lastModifiedDate="2017-11-19T22:41:50.630+01:00" name="Occupancy" projectName="Smart Office" tags="Smart_Office:Natalia">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition baseType="DATETIME" description="" name="date" ordinal="3"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="INTEGER" description="" name="id" ordinal="1"/>
+                <FieldDefinition baseType="BOOLEAN" description="" name="is_ocuppated" ordinal="2"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, projectName : updated, tags : updated&#10;fields : id : Added, Updated, is_ocuppated : Added, date : Added&#10;" timestamp="2017-11-19T22:41:50.630+01:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Things>
-        <Thing description="" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2017-10-23T21:10:59.207+02:00" name="Room" projectName="Smart Office" published="false" tags="Smart_Office:Natalia" thingTemplate="GenericThing" valueStream="">
+        <Thing description="" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2017-10-23T22:43:22.276+02:00" name="Room" projectName="Smart Office" published="false" tags="Smart_Office:Natalia" thingTemplate="GenericThing" valueStream="">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -17,7 +17,9 @@
             </VisibilityPermissions>
             <ConfigurationTables/>
             <ThingShape>
-                <PropertyDefinitions/>
+                <PropertyDefinitions>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="false" aspect.isReadOnly="false" aspect.thingTemplate="Temperature_Template" baseType="THINGNAME" category="" description="" isLocalOnly="false" name="current_temperature" ordinal="1"/>
+                </PropertyDefinitions>
                 <ServiceDefinitions/>
                 <EventDefinitions/>
                 <ServiceMappings/>
@@ -28,11 +30,15 @@
             <RemotePropertyBindings/>
             <RemoteServiceBindings/>
             <RemoteEventBindings/>
-            <AlertConfigurations/>
+            <AlertConfigurations>
+                <AlertDefinitions name="current_temperature"/>
+            </AlertConfigurations>
             <ImplementedShapes/>
             <ThingProperties/>
             <ConfigurationChanges>
                 <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, thingTemplate : updated, projectName : updated, tags : updated&#10;" timestamp="2017-10-23T21:10:59.207+02:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : current_temperature : Added&#10;" timestamp="2017-10-23T22:26:27.230+02:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-23T22:43:22.276+02:00" user="Administrator"/>
             </ConfigurationChanges>
         </Thing>
     </Things>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape baseDataShape="" description="" documentationContent="" homeMashup="" lastModifiedDate="2017-11-07T09:13:00.990+01:00" name="Temperature" projectName="Smart Office" tags="Smart_Office:Natalia;Smart_Office:Ania">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition baseType="DATETIME" description="" name="date" ordinal="2"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="NUMBER" description="" name="id" ordinal="3"/>
+                <FieldDefinition baseType="NUMBER" description="" name="temperature" ordinal="1"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, projectName : updated, tags : updated&#10;" timestamp="2017-11-07T08:59:41.545+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : temperature : Added, date : Added&#10;" timestamp="2017-11-07T09:01:47.957+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : id : Added&#10;" timestamp="2017-11-07T09:13:00.990+01:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
