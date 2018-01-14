@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Mashups>
-        <Mashup aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="Main Mashup" documentationContent="" homeMashup="" lastModifiedDate="2017-11-19T22:38:19.976+01:00" name="SmartOffice_Home" projectName="Smart Office" rows="0.0" tags="Smart_Office:Natalia">
+        <Mashup aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="Main Mashup" documentationContent="" homeMashup="" lastModifiedDate="2018-01-14T04:08:22.131+01:00" name="SmartOffice_Home" projectName="Smart Office" rows="0.0" tags="Smart_Office:Natalia">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -707,6 +707,8 @@
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-07T08:26:28.985+01:00" user="Administrator"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-07T08:34:23.752+01:00" user="Administrator"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-19T22:38:19.976+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T04:08:19.368+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T04:08:22.131+01:00" user="Administrator"/>
             </ConfigurationChanges>
         </Mashup>
     </Mashups>

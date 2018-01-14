@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Mashups>
-        <Mashup aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="" homeMashup="" lastModifiedDate="2017-11-20T20:03:04.576+01:00" name="Room_Mashup" projectName="Smart Office" rows="0.0" tags="Smart_Office:Natalia">
+        <Mashup aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="" homeMashup="" lastModifiedDate="2018-01-14T02:01:00.877+01:00" name="Room_Mashup" projectName="Smart Office" rows="0.0" tags="Smart_Office:Natalia">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -18,7 +18,7 @@
             <ConfigurationTables/>
             <ParameterDefinitions/>
             <Things>
-                <Thing>TemperatureTable</Thing>
+                <Thing>TestR1</Thing>
             </Things>
             <ThingShapes/>
             <ThingTemplates/>
@@ -178,7 +178,7 @@
                       "ShowDataLoading" : true,
                       "ResponsiveLayout" : false,
                       "Z-index" : 10,
-                      "Text" : "10 &#8451;",
+                      "Text" : "",
                       "__TypeDisplayName" : "Label",
                       "ToolTipField" : "",
                       "Area" : "UI",
@@ -391,11 +391,10 @@
                     "Widgets" : [ ],
                     "Properties" : {
                       "Left" : 0.98956298828125,
-                      "Description" : "",
                       "ShowDataLoading" : true,
                       "ResponsiveLayout" : false,
                       "Z-index" : 10,
-                      "Text" : "wy&#322;&#261;czone",
+                      "Text" : "",
                       "__TypeDisplayName" : "Label",
                       "ToolTipField" : "",
                       "Area" : "UI",
@@ -676,7 +675,7 @@
                       "ShowDataLoading" : true,
                       "ResponsiveLayout" : false,
                       "Z-index" : 10,
-                      "Text" : "60%",
+                      "Text" : "",
                       "__TypeDisplayName" : "Label",
                       "ToolTipField" : "",
                       "Area" : "UI",
@@ -876,11 +875,10 @@
                     "Widgets" : [ ],
                     "Properties" : {
                       "Left" : 0.984375,
-                      "Description" : "",
                       "ShowDataLoading" : true,
                       "ResponsiveLayout" : false,
                       "Z-index" : 10,
-                      "Text" : "wy&#322;&#261;czone",
+                      "Text" : "",
                       "__TypeDisplayName" : "Label",
                       "ToolTipField" : "",
                       "Area" : "UI",
@@ -1364,7 +1362,7 @@
                       "ShowDataLoading" : true,
                       "ResponsiveLayout" : false,
                       "Z-index" : 10,
-                      "Text" : "w&#322;&#261;czone",
+                      "Text" : "",
                       "__TypeDisplayName" : "Label",
                       "ToolTipField" : "",
                       "Area" : "UI",
@@ -1739,7 +1737,7 @@
       "BGImageRepeat" : "no-repeat",
       "ShowDataLoading" : true,
       "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
-      "id_index" : 57,
+      "id_index" : 58,
       "supportsAutoResize" : true,
       "Visible" : true,
       "DisplayName" : "Mashup",
@@ -1781,24 +1779,111 @@
       "IgnoreWarningsInViewMashup" : false
     }
   },
-  "Events" : [ ],
+  "Events" : [ {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetProperties",
+    "EventTriggerSection" : "Things_TestR111",
+    "EventHandlerId" : "Things_TestR111",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "Id" : "fe60ee3e-f275-4726-a7cc-bc3fdc353857",
+    "EventTriggerId" : "GetProperties",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "Refresh",
+    "EventTriggerSection" : "Things_TestR111",
+    "EventHandlerId" : "mashup-root",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "Id" : "4f4d6c3a-d16b-4379-aea8-28cd0ae92b3d",
+    "EventTriggerId" : "GetProperties",
+    "EventHandlerArea" : "Mashup"
+  } ],
   "mashupType" : "mashup",
   "DataBindings" : [ {
     "SourceArea" : "Data",
     "TargetArea" : "UI",
     "TargetSection" : "",
-    "SourceId" : "GetDataShape",
-    "Id" : "cdbf7c60-662a-4fb9-9420-9be5843e9312",
-    "SourceSection" : "Things_TemperatureTable",
-    "SourceDetails" : "SelectedRows",
+    "SourceId" : "GetProperties",
+    "Id" : "fbc0a835-8c13-468e-9f75-b716d5551408",
+    "SourceSection" : "Things_TestR111",
+    "SourceDetails" : "AllData",
     "PropertyMaps" : [ {
-      "SourcePropertyType" : "Data",
+      "SourcePropertyType" : "Property",
       "TargetProperty" : "Text",
-      "SourcePropertyBaseType" : "DATASHAPENAME",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
       "TargetPropertyBaseType" : "STRING",
-      "SourceProperty" : "result"
+      "SourceProperty" : "test2"
+    } ],
+    "TargetId" : "label-48"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetProperties",
+    "Id" : "34d3c29a-9060-407d-9eb5-a845c501d92f",
+    "SourceSection" : "Things_TestR111",
+    "SourceDetails" : "AllData",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "Text",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "test1"
     } ],
     "TargetId" : "label-46"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetProperties",
+    "Id" : "ccdc24bc-0b57-4396-961b-f32970f37420",
+    "SourceSection" : "Things_TestR111",
+    "SourceDetails" : "AllData",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "Text",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "New"
+    } ],
+    "TargetId" : "label-52"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetProperties",
+    "Id" : "7bd6eee7-2152-4be4-837c-dea077dbee99",
+    "SourceSection" : "Things_TestR111",
+    "SourceDetails" : "AllData",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "Text",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "NUMBER",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "test1"
+    } ],
+    "TargetId" : "label-54"
+  }, {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetProperties",
+    "Id" : "71fa321f-46da-4a6c-b654-9542131ae3e3",
+    "SourceSection" : "Things_TestR111",
+    "SourceDetails" : "AllData",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "Text",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "name"
+    } ],
+    "TargetId" : "label-56"
   } ],
   "Data" : {
     "UserExtensions" : {
@@ -1816,20 +1901,26 @@
       "Id" : "UserExtensions",
       "DataName" : "UserExtensions"
     },
-    "Things_TemperatureTable" : {
+    "Things_TestR111" : {
       "EntityType" : "Things",
       "Services" : [ {
-        "Target" : "GetDataShape",
-        "Parameters" : { },
-        "APIMethod" : "post",
+        "Target" : "GetProperties",
+        "Parameters" : {
+          "useWebsockets" : true
+        },
+        "APIMethod" : "get",
         "Characteristic" : "Services",
         "RefreshInterval" : 0,
-        "Id" : "5f6bdc9c-669b-4b59-bfb9-b1552700a3f4",
-        "Name" : "GetDataShape"
+        "Id" : "1aed57dd-7f8d-4c64-849f-c262ae42d1b0",
+        "Properties" : {
+          "CustomSuccessMessage" : "",
+          "ShowSuccessMessage" : false
+        },
+        "Name" : "GetProperties"
       } ],
-      "EntityName" : "TemperatureTable",
-      "Id" : "00ba17be-19b2-492a-98ea-b032b09241b3",
-      "DataName" : "Things_TemperatureTable"
+      "EntityName" : "TestR1",
+      "Id" : "3929bb10-04a0-41fa-8dbf-b2edf3f4dcee",
+      "DataName" : "Things_TestR111"
     },
     "Session" : {
       "EntityType" : "Session",
@@ -1884,6 +1975,57 @@
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-07T08:58:28.122+01:00" user="Administrator"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-20T20:03:01.962+01:00" user="Administrator"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-20T20:03:04.576+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T00:39:00.393+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T00:44:50.284+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T00:44:52.275+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T00:46:16.539+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T00:46:18.263+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T00:47:05.224+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T00:47:09.191+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T00:53:34.656+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T00:53:49.108+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T00:54:17.051+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T00:54:18.498+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T00:58:40.575+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T00:58:42.171+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T00:59:23.064+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T00:59:24.431+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:02:25.122+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:02:26.092+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:02:52.891+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:02:59.556+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:03:43.423+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:03:45.085+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:03:57.050+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:03:57.716+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:05:22.081+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:05:23.307+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:06:13.414+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:06:14.107+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:06:42.544+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:36:46.684+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:36:48.251+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:44:38.599+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:44:40.597+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:46:27.812+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:46:45.598+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:46:47.559+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:47:02.935+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:47:34.065+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:47:36.580+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:48:34.774+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:48:35.928+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:51:47.355+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:52:17.077+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:52:31.524+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:53:38.457+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:56:32.735+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:56:33.558+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:56:59.621+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:57:10.591+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T01:57:17.326+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T02:00:01.488+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T02:01:00.877+01:00" user="Administrator"/>
             </ConfigurationChanges>
         </Mashup>
     </Mashups>

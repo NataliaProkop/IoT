@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="" documentationContent="" effectiveThingPackage="RemoteThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2018-01-14T13:19:46.469+01:00" name="Room6" projectName="Smart Office" published="false" tags="Smart_Office:Ania" thingTemplate="RemoteRoomTemplate" valueStream="">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CreateThing">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="name" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="CreateThing">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[if(Things[name] == undefined){
+ var params = {
+ name: name /* STRING */,
+ description: undefined /* STRING */,
+ thingTemplateName: "RemoteRoomTemplate" /* THINGTEMPLATENAME */,
+ tags: undefined /* TAGS */
+ };
+ // no return
+ Resources["EntityServices"].CreateThing(params);
+Things[name].EnableThing();
+Things[name].RestartThing();
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties>
+                <lastConnection>
+                    <Value>1970-01-01T01:00:00.000+01:00</Value>
+                    <Timestamp>2018-01-14T13:19:46.601+01:00</Timestamp>
+                    <Quality>GOOD</Quality>
+                </lastConnection>
+            </ThingProperties>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, projectName : updated, tags : updated, thingTemplate : updated&#10;services :  : Input parameter name Added, CreateThing : Inputs updated, Code Updated, Service Added&#10;" timestamp="2018-01-14T13:19:46.469+01:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>

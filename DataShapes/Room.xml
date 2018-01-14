@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape baseDataShape="" description="" documentationContent="" homeMashup="" lastModifiedDate="2018-01-14T12:37:44.306+01:00" name="Room" projectName="Smart Office" tags="Smart_Office:Ania">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition baseType="BOOLEAN" description="" name="airConditioning" ordinal="6"/>
+                <FieldDefinition baseType="DATETIME" description="" name="date" ordinal="8"/>
+                <FieldDefinition baseType="BOOLEAN" description="" name="heating" ordinal="5"/>
+                <FieldDefinition baseType="NUMBER" description="" name="humidity" ordinal="4"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="NUMBER" description="" name="id" ordinal="1"/>
+                <FieldDefinition baseType="BOOLEAN" description="" name="light" ordinal="7"/>
+                <FieldDefinition baseType="BOOLEAN" description="" name="occupancy" ordinal="3"/>
+                <FieldDefinition baseType="NUMBER" description="" name="temperature" ordinal="2"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, projectName : updated, tags : updated&#10;fields : id : Added, temperature : Added, occupancy : Added, humidity : Added, heating : Added, airConditioning : Added, light : Added&#10;" timestamp="2018-01-14T12:34:37.406+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : date : Added&#10;" timestamp="2018-01-14T12:37:44.306+01:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
