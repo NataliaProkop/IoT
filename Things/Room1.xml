@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Things>
-        <Thing description="" documentationContent="" effectiveThingPackage="RemoteThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2018-01-14T13:05:02.901+01:00" name="Room1" projectName="Smart Office" published="false" tags="Smart_Office:Ania" thingTemplate="RemoteRoomTemplate" valueStream="">
+        <Thing description="" documentationContent="" effectiveThingPackage="RemoteThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2018-01-15T00:04:31.896+01:00" name="Room1" projectName="Smart Office" published="false" tags="Smart_Office:Ania" thingTemplate="RemoteRoomTemplate" valueStream="">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -19,6 +19,12 @@
             <ThingShape>
                 <PropertyDefinitions/>
                 <ServiceDefinitions>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="AddToTable">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="Date" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
                     <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CreateThing">
                         <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
                         <ParameterDefinitions>
@@ -29,6 +35,45 @@
                 <EventDefinitions/>
                 <ServiceMappings/>
                 <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="AddToTable">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+var values = Things["Room1Table"].CreateValues();
+
+values.date = Date; //DATETIME
+values.airConditioning = me.airConditioning; //BOOLEAN
+values.light = me.light; //BOOLEAN
+values.occupancy = me.occupancy; //BOOLEAN
+values.temperature = me.temperature; //NUMBER
+values.humidity = me.humidity; //NUMBER
+values.id = me.id; //NUMBER [Primary Key]
+values.heating = me.heating; //BOOLEAN
+
+var params = {
+	sourceType: undefined /* STRING */,
+	values: values /* INFOTABLE*/,
+	location: undefined /* LOCATION */,
+	source: undefined /* STRING */,
+	tags: undefined /* TAGS */
+};
+
+// result: STRING
+var id = Things["Room1Table"].AddOrUpdateDataTableEntry(params);
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
                     <ServiceImplementation description="" handlerName="Script" name="CreateThing">
                         <ConfigurationTables>
                             <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
@@ -50,6 +95,7 @@
  Resources["EntityServices"].CreateThing(params);
 Things[name].EnableThing();
 Things[name].RestartThing();
+
 }]]></code>
                                     </Row>
                                 </Rows>
@@ -67,8 +113,8 @@ Things[name].RestartThing();
             <ImplementedShapes/>
             <ThingProperties>
                 <lastConnection>
-                    <Value>1970-01-01T01:00:00.000+01:00</Value>
-                    <Timestamp>2018-01-14T13:05:02.943+01:00</Timestamp>
+                    <Value>2018-01-15T03:11:46.586+01:00</Value>
+                    <Timestamp>2018-01-15T03:11:46.586+01:00</Timestamp>
                     <Quality>GOOD</Quality>
                 </lastConnection>
             </ThingProperties>
@@ -77,6 +123,26 @@ Things[name].RestartThing();
                 <ConfigurationChange changeAction="MODIFY" changeReason="services : CreateThing : Code Updated&#10;" timestamp="2018-01-14T13:04:47.592+01:00" user="Administrator"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T13:05:00.350+01:00" user="Administrator"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T13:05:02.899+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T17:07:10.579+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="events : New Event : EventType updated&#10;" timestamp="2018-01-14T20:54:07.539+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : CreateThing : Code Updated&#10;" timestamp="2018-01-14T22:08:42.214+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T22:08:48.231+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : CreateThing : Code Updated&#10;" timestamp="2018-01-14T22:09:45.579+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T22:09:49.862+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddToTable : Code Updated, Inputs updated, Service Added,  : Input parameter Date Added&#10;" timestamp="2018-01-14T22:54:45.795+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T22:57:29.027+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddToTable : ServiceType updated&#10;" timestamp="2018-01-14T22:57:53.654+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T22:58:19.372+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddToTable : ServiceType updated&#10;" timestamp="2018-01-14T22:59:18.729+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddToTable : Code Updated&#10;" timestamp="2018-01-14T23:00:30.924+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T23:10:11.647+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T23:10:31.023+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T23:12:37.624+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddToTable : Code Updated&#10;" timestamp="2018-01-14T23:35:54.674+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T23:36:00.715+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-15T00:03:47.027+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-15T00:04:30.076+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-15T00:04:31.896+01:00" user="Administrator"/>
             </ConfigurationChanges>
         </Thing>
     </Things>

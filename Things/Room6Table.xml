@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Things>
-        <Thing description="" documentationContent="" effectiveThingPackage="DataTableThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2018-01-14T12:40:43.002+01:00" name="Room6Table" projectName="Smart Office" published="false" tags="Smart_Office:Ania" thingTemplate="DataTable" valueStream="">
+        <Thing description="" documentationContent="" effectiveThingPackage="DataTableThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2018-01-14T23:42:34.419+01:00" name="Room6Table" projectName="Smart Office" published="false" tags="Applications:Ania;Smart_Office:Natalia" thingTemplate="DataTable" valueStream="">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -69,7 +69,7 @@
             <ImplementedShapes/>
             <ThingProperties/>
             <ConfigurationChanges>
-                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, projectName : updated, tags : updated&#10;configuration : persistenceProvider : updated, dataShape : updated&#10;" timestamp="2018-01-14T12:40:43.002+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, projectName : updated, tags : updated&#10;configuration : persistenceProvider : updated, dataShape : updated&#10;" timestamp="2018-01-14T23:42:34.419+01:00" user="Administrator"/>
             </ConfigurationChanges>
         </Thing>
     </Things>

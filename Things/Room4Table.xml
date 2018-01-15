@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Things>
-        <Thing description="" documentationContent="" effectiveThingPackage="DataTableThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2018-01-14T12:39:37.845+01:00" name="Room4Table" projectName="Smart Office" published="false" tags="Smart_Office:Ania" thingTemplate="DataTable" valueStream="">
+        <Thing description="" documentationContent="" effectiveThingPackage="DataTableThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2018-01-14T22:33:15.565+01:00" name="Room4Table" projectName="Smart Office" published="false" tags="Smart_Office:Ania;Smart_Office:Natalia" thingTemplate="DataTable" valueStream="">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -59,19 +59,105 @@
                 <EventDefinitions/>
                 <ServiceMappings/>
                 <ServiceImplementations/>
-                <Subscriptions/>
+                <Subscriptions>
+                    <Subscription enabled="true" eventName="DataChange" source="Room4" sourceProperty="id">
+                        <ServiceImplementation description="" handlerName="Script" name="Type.Thing:Entity.Room4:Event.DataChange:Property.id">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[
+var values = Things["Room4Table"].CreateValues();
+
+values.date = eventData; //DATETIME
+values.airConditioning = Things["Room4"].airConditioning; //BOOLEAN
+values.light = Things["Room4"].light; //BOOLEAN
+values.occupancy = Things["Room4"].occupancy; //BOOLEAN
+values.temperature = Things["Room4"].temperature; //NUMBER
+values.humidity = Things["Room4"].humidity; //NUMBER
+values.id = Things["Room4"].id; //NUMBER [Primary Key]
+values.heating = Things["Room4"].heating; //BOOLEAN
+
+var params = {
+	sourceType: undefined /* STRING */,
+	values: values /* INFOTABLE*/,
+	location: undefined /* LOCATION */,
+	source: undefined /* STRING */,
+	tags: undefined /* TAGS */
+};
+
+// result: STRING
+var id = Things["Room4Table"].AddDataTableEntry(params);
+
+]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                    <Subscription enabled="true" eventName="DataChange" source="Room4" sourceProperty="lastConnection">
+                        <ServiceImplementation description="" handlerName="Script" name="Type.Thing:Entity.Room4:Event.DataChange:Property.lastConnection">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[
+var values = Things["Room4Table"].CreateValues();
+
+values.date = eventData; //DATETIME
+values.airConditioning = Things["Room4"].airConditioning; //BOOLEAN
+values.light = Things["Room4"].light; //BOOLEAN
+values.occupancy = Things["Room4"].occupancy; //BOOLEAN
+values.temperature = Things["Room4"].temperature; //NUMBER
+values.humidity = Things["Room4"].humidity; //NUMBER
+values.id = Things["Room4"].id; //NUMBER [Primary Key]
+values.heating = Things["Room4"].heating; //BOOLEAN
+
+var params = {
+	sourceType: undefined /* STRING */,
+	values: values /* INFOTABLE*/,
+	location: undefined /* LOCATION */,
+	source: undefined /* STRING */,
+	tags: undefined /* TAGS */
+};
+
+// result: STRING
+var id = Things["Room4Table"].AddDataTableEntry(params);
+
+]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                </Subscriptions>
             </ThingShape>
             <PropertyBindings/>
             <RemotePropertyBindings/>
             <RemoteServiceBindings/>
             <RemoteEventBindings/>
             <AlertConfigurations/>
-            <ImplementedShapes>
-                <ImplementedShape name="Room" type="ThingShape"/>
-            </ImplementedShapes>
+            <ImplementedShapes/>
             <ThingProperties/>
             <ConfigurationChanges>
-                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, projectName : updated, tags : updated, implementedShapes : updated&#10;configuration : persistenceProvider : updated, dataShape : updated&#10;" timestamp="2018-01-14T12:39:37.845+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, projectName : updated, tags : updated&#10;configuration : persistenceProvider : updated, dataShape : updated&#10;" timestamp="2018-01-14T22:18:32.408+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Source updated, Code Updated, Room4:id.DataChange : New subscription, Subscription Added&#10;" timestamp="2018-01-14T22:19:59.283+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Source updated, Code Updated, Room4:lastConnection.DataChange : New subscription, Subscription Added&#10;" timestamp="2018-01-14T22:23:11.100+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T22:23:20.319+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T22:23:48.906+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Enabled&#10;" timestamp="2018-01-14T22:33:15.565+01:00" user="Administrator"/>
             </ConfigurationChanges>
         </Thing>
     </Things>

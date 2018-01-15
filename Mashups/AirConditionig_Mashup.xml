@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Mashups>
+        <Mashup aspect.isResponsive="false" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="" homeMashup="" lastModifiedDate="2018-01-15T03:08:41.341+01:00" name="AirConditionig_Mashup" projectName="Smart Office" rows="0.0" tags="Smart_Office:Natalia">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ParameterDefinitions>
+                <FieldDefinition aspect.ordinal="0" baseType="BOOLEAN" description="" name="airConditioning" ordinal="0"/>
+                <FieldDefinition aspect.ordinal="1" baseType="DATETIME" description="" name="date" ordinal="0"/>
+            </ParameterDefinitions>
+            <Things/>
+            <ThingShapes/>
+            <ThingTemplates/>
+            <mashupContent><![CDATA[{
+  "RunTimePermissions" : { },
+  "UI" : {
+    "Widgets" : [ {
+      "Widgets" : [ ],
+      "Properties" : {
+        "Left" : 445,
+        "ShowDataLoading" : true,
+        "ResponsiveLayout" : false,
+        "Z-index" : 10,
+        "__TypeDisplayName" : "Label",
+        "ToolTipField" : "",
+        "Area" : "UI",
+        "Type" : "label",
+        "Alignment" : "left",
+        "Top" : 40,
+        "Visible" : true,
+        "DisplayName" : "label-1",
+        "Style" : "DefaultLabelStyle",
+        "Height" : 22,
+        "Id" : "label-1",
+        "Width" : 75
+      }
+    }, {
+      "Widgets" : [ ],
+      "Properties" : {
+        "SourceURL" : "https://image.flaticon.com/icons/svg/112/112516.svg",
+        "Left" : 125,
+        "BorderStyle" : "DefaultImageBorderStyle",
+        "ShowDataLoading" : true,
+        "ResponsiveLayout" : false,
+        "Z-index" : 10,
+        "__TypeDisplayName" : "Image",
+        "ToolTipField" : "",
+        "Area" : "UI",
+        "Type" : "image",
+        "Top" : 15,
+        "AlternateText" : "",
+        "Visible" : true,
+        "DisplayName" : "image-2",
+        "Scaling" : "none",
+        "PreventCaching" : false,
+        "Height" : 65,
+        "Id" : "image-2",
+        "Width" : 100
+      }
+    } ],
+    "Properties" : {
+      "MinHeight" : 0,
+      "Left" : 0,
+      "BGImageRepeat" : "no-repeat",
+      "ShowDataLoading" : true,
+      "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+      "id_index" : 2,
+      "supportsAutoResize" : true,
+      "Visible" : true,
+      "DisplayName" : "Mashup",
+      "Style" : "DefaultMashupStyle",
+      "BGImageSize" : "auto",
+      "Height" : 100,
+      "_currentParameterDefs" : [ {
+        "Description" : "",
+        "BaseType" : "BOOLEAN",
+        "ParameterName" : "airConditioning"
+      }, {
+        "Description" : "",
+        "BaseType" : "DATETIME",
+        "ParameterName" : "date"
+      } ],
+      "Width" : 700,
+      "TitleBar" : false,
+      "Rows" : 0,
+      "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+      "TitleBarStyle" : "DefaultTitleBarStyle",
+      "ResponsiveLayout" : false,
+      "Title" : "",
+      "Columns" : 0,
+      "Z-index" : 10,
+      "TitleBarText" : "Gadget Title Here",
+      "MinWidth" : 0,
+      "__TypeDisplayName" : "Mashup",
+      "EnableParameterEditing" : false,
+      "Area" : "Mashup",
+      "Type" : "mashup",
+      "Top" : 0,
+      "IsPrintLayout" : false,
+      "MashupToEditGadget" : "DefaultMashupToEditGadget",
+      "Id" : "mashup-root",
+      "IgnoreWarningsInViewMashup" : false
+    }
+  },
+  "Events" : [ ],
+  "mashupType" : "mashup",
+  "DataBindings" : [ {
+    "SourceArea" : "Mashup",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "mashup-root",
+    "Id" : "d0c7aefd-1472-42bd-9e4e-623d722cf37f",
+    "SourceSection" : "",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "Text",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "DATETIME",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "date"
+    } ],
+    "TargetId" : "label-1"
+  }, {
+    "SourceArea" : "Mashup",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "mashup-root",
+    "Id" : "d715f929-30b6-4542-ad58-2288ef191ebe",
+    "SourceSection" : "",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "Visible",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "BOOLEAN",
+      "TargetPropertyBaseType" : "BOOLEAN",
+      "SourceProperty" : "airConditioning"
+    } ],
+    "TargetId" : "image-2"
+  } ],
+  "Data" : {
+    "UserExtensions" : {
+      "EntityType" : "UserExtensions",
+      "Services" : [ {
+        "Target" : "GetCurrentUserExtensionProperties",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "UserExtensionInterface",
+        "Name" : "GetCurrentUserExtensionProperties"
+      } ],
+      "EntityName" : "",
+      "Id" : "UserExtensions",
+      "DataName" : "UserExtensions"
+    },
+    "Session" : {
+      "EntityType" : "Session",
+      "Services" : [ {
+        "Target" : "GetGlobalSessionValues",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "SessionInterface",
+        "Name" : "GetGlobalSessionValues"
+      } ],
+      "EntityName" : "",
+      "Id" : "session",
+      "DataName" : "Session"
+    }
+  },
+  "DesignTimePermissions" : { }
+}]]></mashupContent>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated&#10;documentation : updated&#10;" timestamp="2018-01-15T02:42:24.454+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-15T02:43:53.673+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-15T02:45:21.982+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-15T02:48:00.950+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : projectName : updated, tags : updated&#10;" timestamp="2018-01-15T03:08:41.341+01:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </Mashup>
+    </Mashups>
+</Entities>

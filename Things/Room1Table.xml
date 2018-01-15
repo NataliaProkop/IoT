@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Things>
-        <Thing description="" documentationContent="" effectiveThingPackage="DataTableThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2018-01-14T12:35:55.733+01:00" name="Room1Table" projectName="Smart Office" published="false" tags="Smart_Office:Ania" thingTemplate="DataTable" valueStream="">
+        <Thing description="" documentationContent="" effectiveThingPackage="DataTableThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2018-01-14T23:13:12.337+01:00" name="Room1Table" projectName="Smart Office" published="false" tags="Smart_Office:Ania;Smart_Office:Natalia" thingTemplate="DataTable" valueStream="">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -46,7 +46,7 @@
                     <Rows>
                         <Row>
                             <accumulatedDataShape>
-                                <json><![CDATA[{"fieldDefinitions":{"date":{"name":"date","aspects":{},"description":"","baseType":"DATETIME","ordinal":7},"airConditioning":{"name":"airConditioning","aspects":{},"description":"","baseType":"BOOLEAN","ordinal":0},"light":{"name":"light","aspects":{},"description":"","baseType":"BOOLEAN","ordinal":4},"occupancy":{"name":"occupancy","aspects":{},"description":"","baseType":"BOOLEAN","ordinal":5},"temperature":{"name":"temperature","aspects":{},"description":"","baseType":"NUMBER","ordinal":6},"humidity":{"name":"humidity","aspects":{},"description":"","baseType":"NUMBER","ordinal":2},"id":{"name":"id","aspects":{"isPrimaryKey":true},"description":"","baseType":"NUMBER","ordinal":3},"heating":{"name":"heating","aspects":{},"description":"","baseType":"BOOLEAN","ordinal":1}}}]]></json>
+                                <json><![CDATA[{"fieldDefinitions":{"date":{"name":"date","aspects":{},"description":"","baseType":"DATETIME","ordinal":1},"airConditioning":{"name":"airConditioning","aspects":{},"description":"","baseType":"BOOLEAN","ordinal":0},"light":{"name":"light","aspects":{},"description":"","baseType":"BOOLEAN","ordinal":5},"occupancy":{"name":"occupancy","aspects":{},"description":"","baseType":"BOOLEAN","ordinal":6},"temperature":{"name":"temperature","aspects":{},"description":"","baseType":"NUMBER","ordinal":7},"humidity":{"name":"humidity","aspects":{},"description":"","baseType":"NUMBER","ordinal":3},"id":{"name":"id","aspects":{"isPrimaryKey":true},"description":"","baseType":"NUMBER","ordinal":4},"heating":{"name":"heating","aspects":{},"description":"","baseType":"BOOLEAN","ordinal":2}}}]]></json>
                             </accumulatedDataShape>
                             <dataShape><![CDATA[Room]]></dataShape>
                         </Row>
@@ -59,20 +59,51 @@
                 <EventDefinitions/>
                 <ServiceMappings/>
                 <ServiceImplementations/>
-                <Subscriptions/>
+                <Subscriptions>
+                    <Subscription enabled="true" eventName="AnyDataChange" source="Room1" sourceProperty="">
+                        <ServiceImplementation description="" handlerName="Script" name="Type.Thing:Entity.Room1:Event.AnyDataChange">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[
+var params = {
+	Date: eventData /* DATETIME */
+};
+
+// no return
+Things["Room1"].AddToTable(params);
+
+
+]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                </Subscriptions>
             </ThingShape>
             <PropertyBindings/>
             <RemotePropertyBindings/>
             <RemoteServiceBindings/>
             <RemoteEventBindings/>
             <AlertConfigurations/>
-            <ImplementedShapes>
-                <ImplementedShape name="Room" type="ThingShape"/>
-            </ImplementedShapes>
+            <ImplementedShapes/>
             <ThingProperties/>
             <ConfigurationChanges>
-                <ConfigurationChange changeAction="CREATE" changeReason="header : implementedShapes : updated, name : updated&#10;configuration : persistenceProvider : updated, dataShape : updated&#10;" timestamp="2018-01-14T12:35:04.110+01:00" user="Administrator"/>
-                <ConfigurationChange changeAction="MODIFY" changeReason="header : implementedShapes : updated, projectName : updated, tags : updated&#10;" timestamp="2018-01-14T12:35:55.709+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, projectName : updated, tags : updated&#10;configuration : persistenceProvider : updated, dataShape : updated&#10;" timestamp="2018-01-14T21:12:17.832+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Source updated, Code Updated, Room1:AnyDataChange : New subscription, Subscription Added&#10;" timestamp="2018-01-14T21:14:04.786+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T21:14:30.553+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : Event.AnyDataChange : Code Updated&#10;" timestamp="2018-01-14T21:23:32.194+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="configuration : Indexes : updated&#10;" timestamp="2018-01-14T21:24:24.457+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Source updated&#10;" timestamp="2018-01-14T21:24:51.644+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : Event.AnyDataChange : Code Updated&#10;" timestamp="2018-01-14T23:13:12.337+01:00" user="Administrator"/>
             </ConfigurationChanges>
         </Thing>
     </Things>

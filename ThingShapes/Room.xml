@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <ThingShapes>
-        <ThingShape className="" description="" documentationContent="" homeMashup="" lastModifiedDate="2018-01-14T12:22:20.266+01:00" name="Room" projectName="Smart Office" tags="Smart_Office:Ania">
+        <ThingShape className="" description="" documentationContent="" homeMashup="" lastModifiedDate="2018-01-14T15:41:42.629+01:00" name="Room" projectName="Smart Office" tags="Smart_Office:Ania">
             <PropertyDefinitions>
                 <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="airConditioning" ordinal="6"/>
                 <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="false" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="BOOLEAN" category="" description="" isLocalOnly="false" name="heating" ordinal="5"/>
@@ -32,9 +32,18 @@
             <ConfigurationTables/>
             <ConfigurationChanges>
                 <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, projectName : updated, tags : updated&#10;documentation : updated&#10;properties : id : Added, temperature : Added, occupancy : Added, humidity : Added, heating : Added, airConditioning : Added, Updated, light : Added&#10;" timestamp="2018-01-14T12:22:20.266+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : id : Updated, temperature : Updated, occupancy : Updated, humidity : Updated, heating : Updated, airConditioning : Updated, light : Updated&#10;" timestamp="2018-01-14T15:41:42.629+01:00" user="Administrator"/>
             </ConfigurationChanges>
             <PropertyBindings/>
-            <RemotePropertyBindings/>
+            <RemotePropertyBindings>
+                <RemotePropertyBinding foldType="NONE" name="airConditioning" pushThreshold="0.0" pushType="VALUE" sourceName="" timeout="0"/>
+                <RemotePropertyBinding foldType="NONE" name="heating" pushThreshold="0.0" pushType="VALUE" sourceName="" timeout="0"/>
+                <RemotePropertyBinding foldType="NONE" name="humidity" pushThreshold="0.0" pushType="VALUE" sourceName="" timeout="0"/>
+                <RemotePropertyBinding foldType="NONE" name="id" pushThreshold="0.0" pushType="VALUE" sourceName="" timeout="0"/>
+                <RemotePropertyBinding foldType="NONE" name="light" pushThreshold="0.0" pushType="VALUE" sourceName="" timeout="0"/>
+                <RemotePropertyBinding foldType="NONE" name="occupancy" pushThreshold="0.0" pushType="VALUE" sourceName="" timeout="0"/>
+                <RemotePropertyBinding foldType="NONE" name="temperature" pushThreshold="0.0" pushType="VALUE" sourceName="" timeout="0"/>
+            </RemotePropertyBindings>
             <RemoteServiceBindings/>
             <RemoteEventBindings/>
             <AlertConfigurations>

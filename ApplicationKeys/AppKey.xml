@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ApplicationKeys>
+        <ApplicationKey clientName="" description="" documentationContent="" expirationDate="2117-11-11T09:07:13.930+01:00" homeMashup="" ipWhitelist="" keyId="56d47017-06f5-4a3e-b68c-1005e417745a" lastModifiedDate="2018-01-14T13:54:59.512+01:00" name="AppKey" projectName="Smart Office" tags="Smart_Office:Natalia" userNameReference="Administrator">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : userNameReference : updated, name : updated&#10;" timestamp="2017-12-05T09:07:14.457+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : tags : updated, projectName : updated&#10;" timestamp="2018-01-14T02:49:27.279+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : projectName : updated&#10;" timestamp="2018-01-14T13:25:24.711+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : projectName : updated&#10;" timestamp="2018-01-14T13:39:44.537+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : projectName : updated&#10;" timestamp="2018-01-14T13:50:56.774+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : projectName : updated&#10;" timestamp="2018-01-14T13:54:59.512+01:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </ApplicationKey>
+    </ApplicationKeys>
+</Entities>

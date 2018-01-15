@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Mashups>
-        <Mashup aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="Main Mashup" documentationContent="" homeMashup="" lastModifiedDate="2018-01-14T04:08:22.131+01:00" name="SmartOffice_Home" projectName="Smart Office" rows="0.0" tags="Smart_Office:Natalia">
+        <Mashup aspect.isResponsive="true" aspect.mashupType="mashup" columns="0.0" description="Main Mashup" documentationContent="" homeMashup="" lastModifiedDate="2018-01-15T01:52:55.816+01:00" name="SmartOffice_Home" projectName="Smart Office" rows="0.0" tags="Smart_Office:Natalia">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -115,22 +115,22 @@
             "Widgets" : [ {
               "Widgets" : [ ],
               "Properties" : {
-                "Left" : 120,
+                "Left" : 55,
                 "ShowDataLoading" : true,
                 "ResponsiveLayout" : true,
                 "Z-index" : 10,
                 "MashupParameters" : [ ],
                 "__TypeDisplayName" : "Contained Mashup",
-                "Name" : "Room_Mashup",
+                "Name" : "Room1_Mashup",
                 "Area" : "UI",
                 "Type" : "mashupcontainer",
                 "TabSequenceGroup" : 0,
-                "Top" : 20,
+                "Top" : 15,
                 "Visible" : true,
-                "DisplayName" : "mashupcontainer-21",
-                "Height" : 300,
-                "Id" : "mashupcontainer-21",
-                "Width" : 400
+                "DisplayName" : "mashupcontainer-27",
+                "Height" : 618,
+                "Id" : "mashupcontainer-27",
+                "Width" : 1024
               }
             } ],
             "Properties" : {
@@ -165,22 +165,22 @@
             "Widgets" : [ {
               "Widgets" : [ ],
               "Properties" : {
-                "Left" : 120,
+                "Left" : 30,
                 "ShowDataLoading" : true,
                 "ResponsiveLayout" : true,
                 "Z-index" : 10,
                 "MashupParameters" : [ ],
                 "__TypeDisplayName" : "Contained Mashup",
-                "Name" : "Room_Mashup",
+                "Name" : "Room2_Mashup",
                 "Area" : "UI",
                 "Type" : "mashupcontainer",
                 "TabSequenceGroup" : 0,
-                "Top" : 5,
+                "Top" : 10,
                 "Visible" : true,
-                "DisplayName" : "mashupcontainer-22",
-                "Height" : 300,
-                "Id" : "mashupcontainer-22",
-                "Width" : 400
+                "DisplayName" : "mashupcontainer-28",
+                "Height" : 618,
+                "Id" : "mashupcontainer-28",
+                "Width" : 1024
               }
             } ],
             "Properties" : {
@@ -215,22 +215,22 @@
             "Widgets" : [ {
               "Widgets" : [ ],
               "Properties" : {
-                "Left" : 115,
+                "Left" : 55,
                 "ShowDataLoading" : true,
                 "ResponsiveLayout" : true,
                 "Z-index" : 10,
                 "MashupParameters" : [ ],
                 "__TypeDisplayName" : "Contained Mashup",
-                "Name" : "Room_Mashup",
+                "Name" : "Room3_Mashup",
                 "Area" : "UI",
                 "Type" : "mashupcontainer",
                 "TabSequenceGroup" : 0,
-                "Top" : 35,
+                "Top" : 10,
                 "Visible" : true,
-                "DisplayName" : "mashupcontainer-25",
-                "Height" : 300,
-                "Id" : "mashupcontainer-25",
-                "Width" : 400
+                "DisplayName" : "mashupcontainer-29",
+                "Height" : 618,
+                "Id" : "mashupcontainer-29",
+                "Width" : 1024
               }
             } ],
             "Properties" : {
@@ -343,22 +343,22 @@
             "Widgets" : [ {
               "Widgets" : [ ],
               "Properties" : {
-                "Left" : 120,
+                "Left" : 75,
                 "ShowDataLoading" : true,
                 "ResponsiveLayout" : true,
                 "Z-index" : 10,
                 "MashupParameters" : [ ],
                 "__TypeDisplayName" : "Contained Mashup",
-                "Name" : "Room_Mashup",
+                "Name" : "Room4_Mashup",
                 "Area" : "UI",
                 "Type" : "mashupcontainer",
                 "TabSequenceGroup" : 0,
-                "Top" : 25,
+                "Top" : 10,
                 "Visible" : true,
-                "DisplayName" : "mashupcontainer-23",
-                "Height" : 300,
-                "Id" : "mashupcontainer-23",
-                "Width" : 400
+                "DisplayName" : "mashupcontainer-30",
+                "Height" : 618,
+                "Id" : "mashupcontainer-30",
+                "Width" : 1024
               }
             } ],
             "Properties" : {
@@ -393,22 +393,22 @@
             "Widgets" : [ {
               "Widgets" : [ ],
               "Properties" : {
-                "Left" : 90,
+                "Left" : 55,
                 "ShowDataLoading" : true,
                 "ResponsiveLayout" : true,
                 "Z-index" : 10,
                 "MashupParameters" : [ ],
                 "__TypeDisplayName" : "Contained Mashup",
-                "Name" : "Room_Mashup",
+                "Name" : "Room5_Mashup",
                 "Area" : "UI",
                 "Type" : "mashupcontainer",
                 "TabSequenceGroup" : 0,
-                "Top" : 35,
+                "Top" : 5,
                 "Visible" : true,
-                "DisplayName" : "mashupcontainer-24",
-                "Height" : 300,
-                "Id" : "mashupcontainer-24",
-                "Width" : 400
+                "DisplayName" : "mashupcontainer-31",
+                "Height" : 618,
+                "Id" : "mashupcontainer-31",
+                "Width" : 1024
               }
             } ],
             "Properties" : {
@@ -443,22 +443,22 @@
             "Widgets" : [ {
               "Widgets" : [ ],
               "Properties" : {
-                "Left" : 100,
+                "Left" : 30,
                 "ShowDataLoading" : true,
                 "ResponsiveLayout" : true,
                 "Z-index" : 10,
                 "MashupParameters" : [ ],
                 "__TypeDisplayName" : "Contained Mashup",
-                "Name" : "Room_Mashup",
+                "Name" : "Room6_Mashup",
                 "Area" : "UI",
                 "Type" : "mashupcontainer",
                 "TabSequenceGroup" : 0,
-                "Top" : 25,
+                "Top" : 10,
                 "Visible" : true,
-                "DisplayName" : "mashupcontainer-26",
-                "Height" : 300,
-                "Id" : "mashupcontainer-26",
-                "Width" : 400
+                "DisplayName" : "mashupcontainer-32",
+                "Height" : 618,
+                "Id" : "mashupcontainer-32",
+                "Width" : 1024
               }
             } ],
             "Properties" : {
@@ -619,7 +619,7 @@
       "BGImageRepeat" : "no-repeat",
       "ShowDataLoading" : true,
       "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
-      "id_index" : 26,
+      "id_index" : 32,
       "supportsAutoResize" : true,
       "Visible" : true,
       "DisplayName" : "Mashup",
@@ -709,6 +709,13 @@
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-19T22:38:19.976+01:00" user="Administrator"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T04:08:19.368+01:00" user="Administrator"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T04:08:22.131+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-15T00:13:23.326+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-15T00:13:25.016+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-15T00:46:35.946+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-15T00:49:56.219+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-15T01:01:02.929+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-15T01:27:40.745+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-15T01:52:55.816+01:00" user="Administrator"/>
             </ConfigurationChanges>
         </Mashup>
     </Mashups>

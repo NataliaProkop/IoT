@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Things>
-        <Thing description="" documentationContent="" effectiveThingPackage="RemoteThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2018-01-14T13:17:51.758+01:00" name="Room3" projectName="Smart Office" published="false" tags="Smart_Office:Ania" thingTemplate="RemoteRoomTemplate" valueStream="">
+        <Thing description="" documentationContent="" effectiveThingPackage="RemoteThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2018-01-15T00:03:35.498+01:00" name="Room3" projectName="Smart Office" published="false" tags="Smart_Office:Ania" thingTemplate="RemoteRoomTemplate" valueStream="">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -19,6 +19,12 @@
             <ThingShape>
                 <PropertyDefinitions/>
                 <ServiceDefinitions>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="AddToTable">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="DATETIME" description="" name="Date" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
                     <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="CreateThing">
                         <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
                         <ParameterDefinitions>
@@ -29,6 +35,45 @@
                 <EventDefinitions/>
                 <ServiceMappings/>
                 <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="AddToTable">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+var values = Things["Room3Table"].CreateValues();
+
+values.date = Date; //DATETIME
+values.airConditioning = me.airConditioning; //BOOLEAN
+values.light = me.light; //BOOLEAN
+values.occupancy = me.occupancy; //BOOLEAN
+values.temperature = me.temperature; //NUMBER
+values.humidity = me.humidity; //NUMBER
+values.id = me.id; //NUMBER [Primary Key]
+values.heating = me.heating; //BOOLEAN
+
+var params = {
+	sourceType: undefined /* STRING */,
+	values: values /* INFOTABLE*/,
+	location: undefined /* LOCATION */,
+	source: undefined /* STRING */,
+	tags: undefined /* TAGS */
+};
+
+// result: STRING
+var id = Things["Room3Table"].AddOrUpdateDataTableEntry(params);
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
                     <ServiceImplementation description="" handlerName="Script" name="CreateThing">
                         <ConfigurationTables>
                             <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
@@ -67,13 +112,15 @@ Things[name].RestartThing();
             <ImplementedShapes/>
             <ThingProperties>
                 <lastConnection>
-                    <Value>1970-01-01T01:00:00.000+01:00</Value>
-                    <Timestamp>2018-01-14T13:17:51.878+01:00</Timestamp>
+                    <Value>2018-01-15T03:11:46.586+01:00</Value>
+                    <Timestamp>2018-01-15T03:11:46.586+01:00</Timestamp>
                     <Quality>GOOD</Quality>
                 </lastConnection>
             </ThingProperties>
             <ConfigurationChanges>
                 <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, projectName : updated, tags : updated, thingTemplate : updated&#10;services : CreateThing : Code Updated, Inputs updated, Service Added,  : Input parameter name Added&#10;" timestamp="2018-01-14T13:17:51.758+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Input parameter Date Added, AddToTable : Inputs updated, Code Updated, Service Added&#10;" timestamp="2018-01-14T23:49:43.012+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : AddToTable : Code Updated&#10;" timestamp="2018-01-15T00:03:35.498+01:00" user="Administrator"/>
             </ConfigurationChanges>
         </Thing>
     </Things>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Things>
-        <Thing description="" documentationContent="" effectiveThingPackage="DataTableThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2018-01-14T12:40:18.724+01:00" name="Room5Table" projectName="Smart Office" published="false" tags="Smart_Office:Ania" thingTemplate="DataTable" valueStream="">
+        <Thing description="" documentationContent="" effectiveThingPackage="DataTableThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2018-01-14T23:42:01.369+01:00" name="Room5Table" projectName="Smart Office" published="false" tags="Smart_Office:Natalia;Applications:Ania" thingTemplate="DataTable" valueStream="">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -66,12 +66,10 @@
             <RemoteServiceBindings/>
             <RemoteEventBindings/>
             <AlertConfigurations/>
-            <ImplementedShapes>
-                <ImplementedShape name="Room" type="ThingShape"/>
-            </ImplementedShapes>
+            <ImplementedShapes/>
             <ThingProperties/>
             <ConfigurationChanges>
-                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, projectName : updated, tags : updated, implementedShapes : updated&#10;configuration : persistenceProvider : updated, dataShape : updated&#10;" timestamp="2018-01-14T12:40:18.724+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, projectName : updated, tags : updated&#10;configuration : persistenceProvider : updated, dataShape : updated&#10;" timestamp="2018-01-14T23:42:01.368+01:00" user="Administrator"/>
             </ConfigurationChanges>
         </Thing>
     </Things>

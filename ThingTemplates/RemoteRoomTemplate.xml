@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <ThingTemplates>
-        <ThingTemplate baseThingTemplate="RemoteThing" description="" documentationContent="" effectiveThingPackage="RemoteThing" homeMashup="" lastModifiedDate="2018-01-14T12:42:40.896+01:00" name="RemoteRoomTemplate" projectName="Smart Office" tags="Smart_Office:Ania" thingPackage="" valueStream="">
+        <ThingTemplate baseThingTemplate="RemoteThing" description="" documentationContent="" effectiveThingPackage="RemoteThing" homeMashup="" lastModifiedDate="2018-01-14T20:57:33.866+01:00" name="RemoteRoomTemplate" projectName="Smart Office" tags="Smart_Office:Ania" thingPackage="" valueStream="">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -46,6 +46,7 @@
             </InstanceVisibilityPermissions>
             <ConfigurationChanges>
                 <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, baseThingTemplate : updated, implementedShapes : updated, projectName : updated, tags : updated&#10;documentation : updated&#10;" timestamp="2018-01-14T12:42:40.896+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T20:57:33.866+01:00" user="Administrator"/>
             </ConfigurationChanges>
         </ThingTemplate>
     </ThingTemplates>

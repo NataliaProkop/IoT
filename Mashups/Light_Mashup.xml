@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Mashups>
+        <Mashup aspect.isResponsive="false" aspect.mashupType="mashup" columns="0.0" description="" documentationContent="" homeMashup="" lastModifiedDate="2018-01-15T03:09:07.402+01:00" name="Light_Mashup" projectName="Smart Office" rows="0.0" tags="Smart_Office:Natalia">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ParameterDefinitions>
+                <FieldDefinition aspect.ordinal="1" baseType="DATETIME" description="" name="date" ordinal="0"/>
+                <FieldDefinition aspect.ordinal="0" baseType="BOOLEAN" description="" name="light" ordinal="0"/>
+            </ParameterDefinitions>
+            <Things/>
+            <ThingShapes/>
+            <ThingTemplates/>
+            <mashupContent><![CDATA[{
+  "RunTimePermissions" : { },
+  "UI" : {
+    "Widgets" : [ {
+      "Widgets" : [ ],
+      "Properties" : {
+        "SourceURL" : "https://image.flaticon.com/icons/svg/263/263145.svg",
+        "Left" : 145,
+        "BorderStyle" : "DefaultImageBorderStyle",
+        "ShowDataLoading" : true,
+        "ResponsiveLayout" : false,
+        "Z-index" : 10,
+        "__TypeDisplayName" : "Image",
+        "ToolTipField" : "",
+        "Area" : "UI",
+        "Type" : "image",
+        "Top" : 20,
+        "AlternateText" : "",
+        "Visible" : true,
+        "DisplayName" : "image-1",
+        "Scaling" : "none",
+        "PreventCaching" : false,
+        "Height" : 50,
+        "Id" : "image-1",
+        "Width" : 70
+      }
+    }, {
+      "Widgets" : [ ],
+      "Properties" : {
+        "Left" : 445,
+        "ShowDataLoading" : true,
+        "ResponsiveLayout" : false,
+        "Z-index" : 10,
+        "__TypeDisplayName" : "Label",
+        "ToolTipField" : "",
+        "Area" : "UI",
+        "Type" : "label",
+        "Alignment" : "left",
+        "Top" : 35,
+        "Visible" : true,
+        "DisplayName" : "label-2",
+        "Style" : "DefaultLabelStyle",
+        "Height" : 22,
+        "Id" : "label-2",
+        "Width" : 75
+      }
+    } ],
+    "Properties" : {
+      "MinHeight" : 0,
+      "Left" : 0,
+      "BGImageRepeat" : "no-repeat",
+      "ShowDataLoading" : true,
+      "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+      "id_index" : 2,
+      "supportsAutoResize" : true,
+      "Visible" : true,
+      "DisplayName" : "Mashup",
+      "Style" : "DefaultMashupStyle",
+      "BGImageSize" : "auto",
+      "Height" : 100,
+      "_currentParameterDefs" : [ {
+        "Description" : "",
+        "BaseType" : "BOOLEAN",
+        "ParameterName" : "light"
+      }, {
+        "Description" : "",
+        "BaseType" : "DATETIME",
+        "ParameterName" : "date"
+      } ],
+      "Width" : 700,
+      "TitleBar" : false,
+      "Rows" : 0,
+      "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+      "TitleBarStyle" : "DefaultTitleBarStyle",
+      "ResponsiveLayout" : false,
+      "Title" : "",
+      "Columns" : 0,
+      "Z-index" : 10,
+      "TitleBarText" : "Gadget Title Here",
+      "MinWidth" : 0,
+      "__TypeDisplayName" : "Mashup",
+      "EnableParameterEditing" : false,
+      "Area" : "Mashup",
+      "Type" : "mashup",
+      "Top" : 0,
+      "IsPrintLayout" : false,
+      "MashupToEditGadget" : "DefaultMashupToEditGadget",
+      "Id" : "mashup-root",
+      "IgnoreWarningsInViewMashup" : false
+    }
+  },
+  "Events" : [ ],
+  "mashupType" : "mashup",
+  "DataBindings" : [ {
+    "SourceArea" : "Mashup",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "mashup-root",
+    "Id" : "dc0d2432-0a73-45ff-8733-87202b54510a",
+    "SourceSection" : "",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "Text",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "DATETIME",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "date"
+    } ],
+    "TargetId" : "label-2"
+  }, {
+    "SourceArea" : "Mashup",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "mashup-root",
+    "Id" : "8f0b3e1d-be26-4af0-bf58-de20304d2b94",
+    "SourceSection" : "",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "Property",
+      "TargetProperty" : "Visible",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "BOOLEAN",
+      "TargetPropertyBaseType" : "BOOLEAN",
+      "SourceProperty" : "light"
+    } ],
+    "TargetId" : "image-1"
+  } ],
+  "Data" : {
+    "UserExtensions" : {
+      "EntityType" : "UserExtensions",
+      "Services" : [ {
+        "Target" : "GetCurrentUserExtensionProperties",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "UserExtensionInterface",
+        "Name" : "GetCurrentUserExtensionProperties"
+      } ],
+      "EntityName" : "",
+      "Id" : "UserExtensions",
+      "DataName" : "UserExtensions"
+    },
+    "Session" : {
+      "EntityType" : "Session",
+      "Services" : [ {
+        "Target" : "GetGlobalSessionValues",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "SessionInterface",
+        "Name" : "GetGlobalSessionValues"
+      } ],
+      "EntityName" : "",
+      "Id" : "session",
+      "DataName" : "Session"
+    }
+  },
+  "DesignTimePermissions" : { }
+}]]></mashupContent>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated&#10;documentation : updated&#10;" timestamp="2018-01-15T02:41:58.143+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-15T02:44:55.650+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-15T02:45:14.624+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-15T02:47:02.390+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : projectName : updated, tags : updated&#10;" timestamp="2018-01-15T03:09:07.402+01:00" user="Administrator"/>
+            </ConfigurationChanges>
+        </Mashup>
+    </Mashups>
+</Entities>

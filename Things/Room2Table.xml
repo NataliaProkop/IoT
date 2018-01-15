@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Things>
-        <Thing description="" documentationContent="" effectiveThingPackage="DataTableThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2018-01-14T12:41:09.953+01:00" name="Room2Table" projectName="Smart Office" published="false" tags="Smart_Office:Ania" thingTemplate="DataTable" valueStream="">
+        <Thing description="" documentationContent="" effectiveThingPackage="DataTableThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2018-01-14T21:44:21.882+01:00" name="Room2Table" projectName="Smart Office" published="false" tags="Smart_Office:Ania;Smart_Office:Natalia" thingTemplate="DataTable" valueStream="">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -46,7 +46,7 @@
                     <Rows>
                         <Row>
                             <accumulatedDataShape>
-                                <json><![CDATA[{"fieldDefinitions":{"date":{"name":"date","aspects":{},"description":"","baseType":"DATETIME","ordinal":7},"airConditioning":{"name":"airConditioning","aspects":{},"description":"","baseType":"BOOLEAN","ordinal":0},"light":{"name":"light","aspects":{},"description":"","baseType":"BOOLEAN","ordinal":4},"occupancy":{"name":"occupancy","aspects":{},"description":"","baseType":"BOOLEAN","ordinal":5},"temperature":{"name":"temperature","aspects":{},"description":"","baseType":"NUMBER","ordinal":6},"humidity":{"name":"humidity","aspects":{},"description":"","baseType":"NUMBER","ordinal":2},"id":{"name":"id","aspects":{"isPrimaryKey":true},"description":"","baseType":"NUMBER","ordinal":3},"heating":{"name":"heating","aspects":{},"description":"","baseType":"BOOLEAN","ordinal":1}}}]]></json>
+                                <json><![CDATA[{"fieldDefinitions":{"date":{"name":"date","aspects":{},"description":"","baseType":"DATETIME","ordinal":1},"airConditioning":{"name":"airConditioning","aspects":{},"description":"","baseType":"BOOLEAN","ordinal":0},"light":{"name":"light","aspects":{},"description":"","baseType":"BOOLEAN","ordinal":5},"occupancy":{"name":"occupancy","aspects":{},"description":"","baseType":"BOOLEAN","ordinal":6},"temperature":{"name":"temperature","aspects":{},"description":"","baseType":"NUMBER","ordinal":7},"humidity":{"name":"humidity","aspects":{},"description":"","baseType":"NUMBER","ordinal":3},"id":{"name":"id","aspects":{"isPrimaryKey":true},"description":"","baseType":"NUMBER","ordinal":4},"heating":{"name":"heating","aspects":{},"description":"","baseType":"BOOLEAN","ordinal":2}}}]]></json>
                             </accumulatedDataShape>
                             <dataShape><![CDATA[Room]]></dataShape>
                         </Row>
@@ -59,21 +59,63 @@
                 <EventDefinitions/>
                 <ServiceMappings/>
                 <ServiceImplementations/>
-                <Subscriptions/>
+                <Subscriptions>
+                    <Subscription enabled="true" eventName="AnyDataChange" source="Room2" sourceProperty="">
+                        <ServiceImplementation description="" handlerName="Script" name="Type.Thing:Entity.Room2:Event.AnyDataChange">
+                            <ConfigurationTables>
+                                <ConfigurationTable description="" isMultiRow="false" name="Script" ordinal="0">
+                                    <DataShape>
+                                        <FieldDefinitions>
+                                            <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                        </FieldDefinitions>
+                                    </DataShape>
+                                    <Rows>
+                                        <Row>
+                                            <code><![CDATA[
+var values = Things["Room2Table"].CreateValues();
+
+values.date = eventData; //DATETIME
+values.airConditioning = Things["Room2"].airConditioning; //BOOLEAN
+values.light = Things["Room2"].light; //BOOLEAN
+values.occupancy = Things["Room2"].occupancy; //BOOLEAN
+values.temperature = Things["Room2"].temperature; //NUMBER
+values.humidity = Things["Room2"].humidity; //NUMBER
+values.id = Things["Room2"].id; //NUMBER [Primary Key]
+values.heating = Things["Room2"].heating; //BOOLEAN
+
+var params = {
+	sourceType: undefined /* STRING */,
+	values: values /* INFOTABLE*/,
+	location: undefined /* LOCATION */,
+	source: undefined /* STRING */,
+	tags: undefined /* TAGS */
+};
+
+// result: STRING
+var id = Things["Room2Table"].AddDataTableEntry(params);
+
+]]></code>
+                                        </Row>
+                                    </Rows>
+                                </ConfigurationTable>
+                            </ConfigurationTables>
+                        </ServiceImplementation>
+                    </Subscription>
+                </Subscriptions>
             </ThingShape>
             <PropertyBindings/>
             <RemotePropertyBindings/>
             <RemoteServiceBindings/>
             <RemoteEventBindings/>
             <AlertConfigurations/>
-            <ImplementedShapes>
-                <ImplementedShape name="Room" type="ThingShape"/>
-            </ImplementedShapes>
+            <ImplementedShapes/>
             <ThingProperties/>
             <ConfigurationChanges>
-                <ConfigurationChange changeAction="CREATE" changeReason="header : implementedShapes : updated, name : updated&#10;configuration : persistenceProvider : updated, dataShape : updated&#10;" timestamp="2018-01-14T12:35:39.010+01:00" user="Administrator"/>
-                <ConfigurationChange changeAction="MODIFY" changeReason="header : projectName : updated, tags : updated&#10;" timestamp="2018-01-14T12:36:04.440+01:00" user="Administrator"/>
-                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T12:41:09.952+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, projectName : updated, tags : updated&#10;configuration : persistenceProvider : updated, dataShape : updated&#10;" timestamp="2018-01-14T21:40:53.026+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="subscriptions : New subscription : Source updated, Code Updated, Room2:AnyDataChange : New subscription, Subscription Added&#10;" timestamp="2018-01-14T21:42:29.959+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T21:43:02.383+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T21:44:11.168+01:00" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-14T21:44:21.881+01:00" user="Administrator"/>
             </ConfigurationChanges>
         </Thing>
     </Things>
